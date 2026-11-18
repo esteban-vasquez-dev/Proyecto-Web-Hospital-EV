@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - hospital Luz de Vida</title>
+</head>
+
+<body>
+    <header>
+        <h3 style="text-align: center; color: aqua; font-size: 40px;">Hospital Luz de Vida</h3>
+        <hr>
+    </header>
+    <nav style="display: flex; justify-content: center; gap: 30px;">
+        <a href="../index.html">Inicio</a>
+        <a href="/pages/registro.html"> Registrar Paciente</a>
+    </nav>
+    <hr>
+
+    <main>
+        <form action="#">
+            <label for="nombre">1. Ingrese nombre completo del paciente: </label>
+            <input type="text" id="nombre" placeholder="Nombre y Apellido" size="35" required>
+            <br><br>
+
+            <label for="cedula">2. Ingrese número de identificación: </label>
+            <input type="text" id="cedula" placeholder="Ej. 1712345678" size="20" required>
+            <br><br>
+
+            <label for="fecha_nacimiento">3. Ingrese fecha de nacimiento: </label>
+            <input type="date" id="fecha_nacimiento" required>
+            <br><br>
+
+            <label for="edad">4. Ingrese edad actual: </label>
+            <input type="number" id="edad" placeholder="Edad" min="0" max="120" required>
+            <br><br>
+
+            <label>5. Seleccione género: </label>
+            <label for="masculino">
+                <input type="radio" id="masculino" name="genero" value="masculino" required>Masculino
+            </label>
+            <label for="femenino">
+                <input type="radio" id="femenino" name="genero" value="femenino">Femenino
+            </label>
+            <br><br>
+
+            <label for="email">6. Ingrese correo electrónico de contacto: </label>
+            <input type="email" id="email" placeholder="paciente@correo.com" size="30" required>
+            <br><br>
+
+            <!-- 1er Campo nuevo (type="tel"): Permite ingresar números de teléfono y adapta el teclado en dispositivos móviles. -->
+
+            <label for="telefono">7. Ingrese teléfono de emergencia: </label>
+            <input type="tel" id="telefono" placeholder="099-123-4567" required>
+            <br><br>
+
+            <label for="passw">8. Cree una contraseña para ver sus resultados: </label>
+            <input type="password" id="passw" placeholder="Contraseña" required>
+            <br><br>
+
+            <label for="sangre">9. Seleccione tipo de sangre: </label>
+            <select id="sangre" required>
+                <option value="">-- Seleccione --</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+            <br><br>
+
+            <label>10. Marque si padece enfermedades crónicas: </label>
+            <input type="checkbox" id="diabetes" name="enfermedades" value="diabetes">
+            <label for="diabetes">Diabetes</label>
+            <input type="checkbox" id="hipertension" name="enfermedades" value="hipertension">
+            <label for="hipertension">Hipertensión</label>
+            <input type="checkbox" id="asma" name="enfermedades" value="asma">
+            <label for="asma">Asma</label>
+            <br><br>
+
+            <label for="peso">11. Ingrese su peso en kg: </label>
+            <input type="number" id="peso" step="0.1" placeholder="Ej. 70.5" required>
+            <br><br>
+
+            <label for="motivo">12. Describa sus síntomas o motivo de consulta: </label><br>
+            <textarea id="motivo" rows="4" cols="50" placeholder="Escriba aquí los síntomas del paciente..."
+                required></textarea>
+            <br><br>
+
+            <!-- 2do Campo nuevo (type="range"): Crea una barra deslizante para seleccionar un valor numérico dentro de un rango definido (min y max). -->
+            <label for="dolor">13. Nivel de dolor actual (1 = leve, 10 = muy fuerte): </label>
+            <input type="range" id="dolor" min="1" max="10" value="5">
+            <br><br>
+
+            <!-- 3er Campo nuevo (type="color"): Abre una paleta visual para elegir un color exacto. -->
+            <label for="triaje">14. Seleccione color urgencia en base al semáforo (Rojo-Urgente, Amarillo-Inestable,
+                Verde-Estable con molestias): </label>
+            <input type="color" id="triaje" value="#00ff00">
+            <br><br>
+
+
+            <label for="fecha_ingreso">15. Fecha y hora de atención: </label>
+            <input type="datetime-local" id="fecha_ingreso" required>
+            <br><br>
+
+            <!--Botones-->
+            <input type="submit" value="Guardar Historia Clínica">
+            <input type="reset" value="Limpiar Formulario">
+        </form>
+    </main>
+</body>
+
+</html>
